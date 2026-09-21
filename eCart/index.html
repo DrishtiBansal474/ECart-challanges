@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart - Product Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+
+    <header class="header">
+        <div class="container">
+
+            <h1>TechMart</h1>
+
+            <p>
+                Product Explorer
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="container">
+
+
+     
+
+        <section class="challenge-section">
+
+            <div class="section-header">
+
+                <span class="challenge-badge">
+                    Challenge 1
+                </span>
+
+                <h2>Smart Price Finder</h2>
+
+                <p>
+                    Find products closest to your target price.
+                </p>
+
+            </div>
+
+
+            <!-- Target Price -->
+
+            <div class="search-box">
+
+                <div class="input-group">
+
+                    <label for="targetPrice">
+                        Target Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="targetPrice"
+                        placeholder="Example: 70000"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="resultCount">
+                        Number of Products
+                    </label>
+
+                    <select id="resultCount">
+
+                        <option value="3">
+                            Top 3
+                        </option>
+
+                        <option value="5">
+                            Top 5
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    id="priceSearchBtn"
+                    class="primary-btn"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+            <p
+                id="priceMessage"
+                class="message"
+            ></p>
+
+
+            <!-- Price Results -->
+
+            <div
+                id="priceResults"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+
+
+
+        <section class="challenge-section">
+
+            <div class="section-header">
+
+                <span class="challenge-badge">
+                    Challenge 6
+                </span>
+
+                <h2>Inventory Range Dashboard</h2>
+
+                <p>
+                    Find products and total inventory value
+                    inside a price range.
+                </p>
+
+            </div>
+
+
+            <!-- Range Inputs -->
+
+            <div class="search-box">
+
+                <div class="input-group">
+
+                    <label for="minPrice">
+                        Minimum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="minPrice"
+                        placeholder="Example: 5000"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="maxPrice">
+                        Maximum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maxPrice"
+                        placeholder="Example: 20000"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <button
+                    id="rangeSearchBtn"
+                    class="primary-btn"
+                >
+                    Find Products
+                </button>
+
+            </div>
+
+
+            <p
+                id="rangeMessage"
+                class="message"
+            ></p>
+
+
+            <!-- Summary -->
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+
+                    <span>
+                        Matching Products
+                    </span>
+
+                    <strong id="productCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <span>
+                        Total Inventory Value
+                    </span>
+
+                    <strong id="inventoryValue">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="rangeResults"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+
+  
+
+    <footer>
+
+        <p>
+            TechMart Product Explorer
+        </p>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+
+    <script src="data.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
