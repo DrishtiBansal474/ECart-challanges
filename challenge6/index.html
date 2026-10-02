@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Range Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Inventory Range Dashboard</h1>
+
+        <p class="subtitle">
+            Find products and inventory value within a price range
+        </p>
+
+
+        <!-- Search Section -->
+
+        <div class="search-box">
+
+            <div class="input-group">
+
+                <label for="minPrice">
+                    Minimum Price
+                </label>
+
+                <input
+                    type="number"
+                    id="minPrice"
+                    placeholder="Enter minimum price"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="maxPrice">
+                    Maximum Price
+                </label>
+
+                <input
+                    type="number"
+                    id="maxPrice"
+                    placeholder="Enter maximum price"
+                >
+
+            </div>
+
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="summary">
+
+            <div class="summary-card">
+
+                <h3>Products</h3>
+
+                <p id="productCount">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Inventory Value</h3>
+
+                <p id="inventoryValue">
+                    ₹0
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Products -->
+
+        <h2>Matching Products</h2>
+
+        <div
+            id="productContainer"
+            class="products"
+        ></div>
+
+    </div>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
