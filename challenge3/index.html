@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recently Viewed Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Recently Viewed Products</h1>
+
+    <!-- All Products -->
+    <section>
+        <h2>Products</h2>
+        <div id="productContainer"></div>
+    </section>
+
+    <!-- Product Details -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal">×</button>
+
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <!-- Recently Viewed -->
+    <section>
+        <div class="recent-header">
+            <h2>Recently Viewed</h2>
+            <button id="removeHistory">Remove History</button>
+        </div>
+
+        <div id="recentlyViewed"></div>
+
+        <p id="emptyMessage">No recently viewed products.</p>
+    </section>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
