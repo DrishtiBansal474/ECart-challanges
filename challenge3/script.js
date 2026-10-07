@@ -42,4 +42,30 @@ function viewProduct(id) {
 closeModal.addEventListener("click", function() {
     productModal.style.display = "none";
 });
+let recentlyViewed = [];
 
+function viewProduct(id) {
+
+    const product = products.find(function(product) {
+        return product.id === id;
+    });
+
+    // Recently viewed mein product already hai to remove karo
+    recentlyViewed = recentlyViewed.filter(function(product) {
+        return product.id !== id;
+    });
+
+    // Latest viewed product ko beginning mein add karo
+    recentlyViewed.unshift(product);
+
+    productDetails.innerHTML = `
+        <img src="${product.image}" alt="${product.title}">
+        <h2>${product.title}</h2>
+        <p>Price: ₹${product.price}</p>
+        <p>${product.description}</p>
+    `;
+
+    productModal.style.display = "block";
+
+    displayRecentlyViewed();
+}
