@@ -69,3 +69,19 @@ function viewProduct(id) {
 
     displayRecentlyViewed();
 }
+function displayRecentlyViewed() {
+
+    const recentlyViewedContainer =
+        document.getElementById("recentlyViewed");
+
+    const emptyMessage =
+        document.getElementById("emptyMessage");
+
+    recentlyViewedContainer.innerHTML = "";
+
+    if (recentlyViewed.length === 0) {
+
+        emptyMessage.style.display = "block";
+
+        return;
+    }
