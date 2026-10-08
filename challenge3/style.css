@@ -57,3 +57,113 @@ h2 {
     border-radius: 6px;
     cursor: pointer;
 }
+.product-card button:hover {
+    background: #444;
+}
+
+
+
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#removeHistory {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #d32f2f;
+    color: white;
+    cursor: pointer;
+}
+#removeHistory:hover {
+    background: #b71c1c;
+}
+
+#recentlyViewed {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+#recentlyViewed .product-card {
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+
+
+
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 500px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+}
+.close-button {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+
+#productDetails h2 {
+    margin-top: 0;
+}
+
+#productDetails p {
+    margin: 10px 0;
+    color: #555;
+}
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    #recentlyViewed .product-card {
+        min-width: 200px;
+    }
+
+    .recent-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
