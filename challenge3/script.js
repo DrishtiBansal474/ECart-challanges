@@ -85,3 +85,23 @@ function displayRecentlyViewed() {
 
         return;
     }
+        emptyMessage.style.display = "none";
+
+    recentlyViewed.forEach(function(product) {
+
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>₹${product.price}</p>
+
+            <button onclick="viewProduct(${product.id})">
+                View Again
+            </button>
+        `;
+
+        recentlyViewedContainer.appendChild(card);
+    });
+}
